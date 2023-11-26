@@ -30,4 +30,8 @@ struct StockOutput: Codable {
     let stck_mxpr: String //주식 상한가
     let stck_llam: String //주식 하한가
     let stck_sdpr: String //주식 기준가
+    
+    let mrkt_warn_cls_code: String //시장경고코드(00:없음, 01:투자주의, 02:투자경고, 03:투자위험)
+    let short_over_yn: String //단기과열여부(Y/N)
+    
 }

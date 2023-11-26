@@ -1,20 +1,28 @@
 PODS:
   - Alamofire (5.8.1)
+  - Pageboy (4.0.2)
   - Starscream (4.0.6)
+  - Tabman (3.0.2):
+    - Pageboy (~> 4.0.2)
 
 DEPENDENCIES:
   - Alamofire
   - Starscream
+  - Tabman (~> 3.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Pageboy
     - Starscream
+    - Tabman
 
 SPEC CHECKSUMS:
   Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
+  Pageboy: 34ff11e8d1041b81769d5bcde9b19a0cb7218bd9
   Starscream: fb2c4510bebf908c62bd383bcf05e673720e91fd
+  Tabman: 6326ec3a792da1c2a6e79c7eddb56af7b591c9d6
 
-PODFILE CHECKSUM: 8660afbe8d129b43c861e5d5506d6db3793f91bc
+PODFILE CHECKSUM: b1cb6c892c30130ba24fc04e3d3ea31de235fe9c
 
 COCOAPODS: 1.10.2

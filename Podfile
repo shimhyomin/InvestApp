@@ -7,7 +7,7 @@ target 'InvestApp' do
 
   pod 'Alamofire'
   pod 'Starscream'
-
+  pod 'Tabman', '~> 3.0'
   # Pods for InvestApp
 
 end

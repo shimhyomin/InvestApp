@@ -37,4 +37,33 @@ struct StockModel {
         default: return 12
         }
     }
+    
+    //현재가 천단위로 끊기
+    var prprDeci: String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+
+        if let val = Int(prpr) {
+            let result = numberFormatter.string(from: NSNumber(value: val))
+            return result ?? "0"
+        } else {
+            return "0"
+        }
+    }
+    
+    //전일 대비 부호 삭제(Int 절대값)
+    var vrssAbs: String {
+        let vrssInt = Int(prdy_vrss) ?? 0 //Int형 선언
+        let vrssMagnitude = vrssInt.magnitude //(UInt형)
+        let vrssAbs = abs(Int32(vrssMagnitude)) //(Int형)
+        return String(vrssAbs)
+    }
+    
+    //전일 대비율 부호 삭제(Float 절대값)
+    var ctrtAbs: String {
+        let ctrtFloat = Float(prdy_ctrt) ?? 0.0
+        let ctrtMagnitude = ctrtFloat.magnitude
+        let ctrtAbs = abs(ctrtMagnitude)
+        return String(ctrtAbs)
+    }
 }

@@ -7,23 +7,77 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		160C844B18673862BFF170E3 /* Pods_InvestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BD9E051ED19417C414732D /* Pods_InvestApp.framework */; };
+		C28875592B078CC400909EF7 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28875582B078CC400909EF7 /* K.swift */; };
+		C28875672B0876DA00909EF7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28875662B0876DA00909EF7 /* HomeViewController.swift */; };
+		C288756A2B087A5000909EF7 /* HomeStockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28875682B087A5000909EF7 /* HomeStockCell.swift */; };
+		C288756B2B087A5000909EF7 /* HomeStockCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28875692B087A5000909EF7 /* HomeStockCell.xib */; };
+		C288756D2B08818000909EF7 /* StockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C288756C2B08818000909EF7 /* StockData.swift */; };
+		C288756F2B08833C00909EF7 /* StockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C288756E2B08833C00909EF7 /* StockManager.swift */; };
+		C28875712B089E4500909EF7 /* AccessTokenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28875702B089E4500909EF7 /* AccessTokenData.swift */; };
+		C28875732B08ADA100909EF7 /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28875722B08ADA100909EF7 /* StockModel.swift */; };
+		C28875882B0936D200909EF7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28875872B0936D200909EF7 /* DetailViewController.swift */; };
+		C288758A2B09462B00909EF7 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28875892B09462B00909EF7 /* APIService.swift */; };
+		C288758E2B09FCB500909EF7 /* OrderCashData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C288758D2B09FCB500909EF7 /* OrderCashData.swift */; };
+		C28875902B0A171000909EF7 /* AccountData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C288758F2B0A171000909EF7 /* AccountData.swift */; };
 		C2A81C5E2AFF702F004F5B11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A81C5D2AFF702F004F5B11 /* AppDelegate.swift */; };
 		C2A81C602AFF702F004F5B11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A81C5F2AFF702F004F5B11 /* SceneDelegate.swift */; };
-		C2A81C622AFF702F004F5B11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A81C612AFF702F004F5B11 /* ViewController.swift */; };
 		C2A81C652AFF702F004F5B11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2A81C632AFF702F004F5B11 /* Main.storyboard */; };
 		C2A81C672AFF7030004F5B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2A81C662AFF7030004F5B11 /* Assets.xcassets */; };
 		C2A81C6A2AFF7030004F5B11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2A81C682AFF7030004F5B11 /* LaunchScreen.storyboard */; };
+		C2F7146B2B0F5AE500F85B2A /* TradingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F7146A2B0F5AE500F85B2A /* TradingManager.swift */; };
+		C2F7146F2B0FC4A800F85B2A /* location.csv in Resources */ = {isa = PBXBuildFile; fileRef = C2F7146E2B0FC4A800F85B2A /* location.csv */; };
+		C2F714712B0FCE2800F85B2A /* StockList.csv in Resources */ = {isa = PBXBuildFile; fileRef = C2F714702B0FCE2800F85B2A /* StockList.csv */; };
+		C2F714732B121A5000F85B2A /* TradingTMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F714722B121A5000F85B2A /* TradingTMViewController.swift */; };
+		C2F714752B121B7B00F85B2A /* OrderCashTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F714742B121B7B00F85B2A /* OrderCashTabViewController.swift */; };
+		C2F714792B1230B700F85B2A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F714782B1230B700F85B2A /* TabBarController.swift */; };
+		C2F7147B2B12800700F85B2A /* OrderCashTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F7147A2B12800700F85B2A /* OrderCashTabView.swift */; };
+		C2F7147D2B12823600F85B2A /* RvsecnclTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F7147C2B12823600F85B2A /* RvsecnclTabView.swift */; };
+		C2F7147F2B12A1E400F85B2A /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F7147E2B12A1E400F85B2A /* AccountViewController.swift */; };
+		C2F714812B12B6B500F85B2A /* OrderCashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F714802B12B6B500F85B2A /* OrderCashViewController.swift */; };
+		C2F714832B12C84B00F85B2A /* OrderConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F714822B12C84B00F85B2A /* OrderConfirmViewController.swift */; };
+		C2F714852B12CA7000F85B2A /* OrderCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F714842B12CA7000F85B2A /* OrderCompleteView.swift */; };
+		C2F714872B139A2D00F85B2A /* MyKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2F714862B139A2D00F85B2A /* MyKeyboardView.xib */; };
+		C2F714892B139A8300F85B2A /* MyKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F714882B139A8300F85B2A /* MyKeyboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		77927A8C39D19396D9454AAA /* Pods-InvestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvestApp.debug.xcconfig"; path = "Target Support Files/Pods-InvestApp/Pods-InvestApp.debug.xcconfig"; sourceTree = "<group>"; };
+		C28875582B078CC400909EF7 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		C28875662B0876DA00909EF7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C28875682B087A5000909EF7 /* HomeStockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStockCell.swift; sourceTree = "<group>"; };
+		C28875692B087A5000909EF7 /* HomeStockCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeStockCell.xib; sourceTree = "<group>"; };
+		C288756C2B08818000909EF7 /* StockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StockData.swift; path = InvestApp/Model/StockData.swift; sourceTree = SOURCE_ROOT; };
+		C288756E2B08833C00909EF7 /* StockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockManager.swift; sourceTree = "<group>"; };
+		C28875702B089E4500909EF7 /* AccessTokenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenData.swift; sourceTree = "<group>"; };
+		C28875722B08ADA100909EF7 /* StockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
+		C28875872B0936D200909EF7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C28875892B09462B00909EF7 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		C288758D2B09FCB500909EF7 /* OrderCashData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCashData.swift; sourceTree = "<group>"; };
+		C288758F2B0A171000909EF7 /* AccountData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountData.swift; sourceTree = "<group>"; };
 		C2A81C5A2AFF702F004F5B11 /* InvestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InvestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2A81C5D2AFF702F004F5B11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2A81C5F2AFF702F004F5B11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C2A81C612AFF702F004F5B11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C2A81C642AFF702F004F5B11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C2A81C662AFF7030004F5B11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2A81C692AFF7030004F5B11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2A81C6B2AFF7030004F5B11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2BD9E051ED19417C414732D /* Pods_InvestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InvestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2F7146A2B0F5AE500F85B2A /* TradingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingManager.swift; sourceTree = "<group>"; };
+		C2F7146E2B0FC4A800F85B2A /* location.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = location.csv; sourceTree = "<group>"; };
+		C2F714702B0FCE2800F85B2A /* StockList.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StockList.csv; sourceTree = "<group>"; };
+		C2F714722B121A5000F85B2A /* TradingTMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingTMViewController.swift; sourceTree = "<group>"; };
+		C2F714742B121B7B00F85B2A /* OrderCashTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCashTabViewController.swift; sourceTree = "<group>"; };
+		C2F714782B1230B700F85B2A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		C2F7147A2B12800700F85B2A /* OrderCashTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCashTabView.swift; sourceTree = "<group>"; };
+		C2F7147C2B12823600F85B2A /* RvsecnclTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RvsecnclTabView.swift; sourceTree = "<group>"; };
+		C2F7147E2B12A1E400F85B2A /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		C2F714802B12B6B500F85B2A /* OrderCashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCashViewController.swift; sourceTree = "<group>"; };
+		C2F714822B12C84B00F85B2A /* OrderConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmViewController.swift; sourceTree = "<group>"; };
+		C2F714842B12CA7000F85B2A /* OrderCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCompleteView.swift; sourceTree = "<group>"; };
+		C2F714862B139A2D00F85B2A /* MyKeyboardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyKeyboardView.xib; sourceTree = "<group>"; };
+		C2F714882B139A8300F85B2A /* MyKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeyboardView.swift; sourceTree = "<group>"; };
+		E79728C7B830F6102A429422 /* Pods-InvestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvestApp.release.xcconfig"; path = "Target Support Files/Pods-InvestApp/Pods-InvestApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +85,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				160C844B18673862BFF170E3 /* Pods_InvestApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82A74AC178C8F51F56CEA376 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2BD9E051ED19417C414732D /* Pods_InvestApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C2A81C512AFF702F004F5B11 = {
 			isa = PBXGroup;
 			children = (
 				C2A81C5C2AFF702F004F5B11 /* InvestApp */,
 				C2A81C5B2AFF702F004F5B11 /* Products */,
+				FD03B7753B2980403AB113A8 /* Pods */,
+				82A74AC178C8F51F56CEA376 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +121,73 @@
 		C2A81C5C2AFF702F004F5B11 /* InvestApp */ = {
 			isa = PBXGroup;
 			children = (
+				C2A81C712AFF7037004F5B11 /* Model */,
+				C2A81C732AFF7051004F5B11 /* Controller */,
+				C2A81C722AFF703D004F5B11 /* View */,
 				C2A81C5D2AFF702F004F5B11 /* AppDelegate.swift */,
 				C2A81C5F2AFF702F004F5B11 /* SceneDelegate.swift */,
-				C2A81C612AFF702F004F5B11 /* ViewController.swift */,
-				C2A81C632AFF702F004F5B11 /* Main.storyboard */,
 				C2A81C662AFF7030004F5B11 /* Assets.xcassets */,
 				C2A81C682AFF7030004F5B11 /* LaunchScreen.storyboard */,
+				C2F714702B0FCE2800F85B2A /* StockList.csv */,
+				C2F7146E2B0FC4A800F85B2A /* location.csv */,
 				C2A81C6B2AFF7030004F5B11 /* Info.plist */,
+				C28875582B078CC400909EF7 /* K.swift */,
 			);
 			path = InvestApp;
+			sourceTree = "<group>";
+		};
+		C2A81C712AFF7037004F5B11 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C288756E2B08833C00909EF7 /* StockManager.swift */,
+				C288756C2B08818000909EF7 /* StockData.swift */,
+				C28875722B08ADA100909EF7 /* StockModel.swift */,
+				C28875702B089E4500909EF7 /* AccessTokenData.swift */,
+				C28875892B09462B00909EF7 /* APIService.swift */,
+				C288758D2B09FCB500909EF7 /* OrderCashData.swift */,
+				C288758F2B0A171000909EF7 /* AccountData.swift */,
+				C2F7146A2B0F5AE500F85B2A /* TradingManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C2A81C722AFF703D004F5B11 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2A81C632AFF702F004F5B11 /* Main.storyboard */,
+				C28875682B087A5000909EF7 /* HomeStockCell.swift */,
+				C28875692B087A5000909EF7 /* HomeStockCell.xib */,
+				C2F714862B139A2D00F85B2A /* MyKeyboardView.xib */,
+				C2F714882B139A8300F85B2A /* MyKeyboardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C2A81C732AFF7051004F5B11 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C28875662B0876DA00909EF7 /* HomeViewController.swift */,
+				C28875872B0936D200909EF7 /* DetailViewController.swift */,
+				C2F714722B121A5000F85B2A /* TradingTMViewController.swift */,
+				C2F714742B121B7B00F85B2A /* OrderCashTabViewController.swift */,
+				C2F714782B1230B700F85B2A /* TabBarController.swift */,
+				C2F7147A2B12800700F85B2A /* OrderCashTabView.swift */,
+				C2F7147C2B12823600F85B2A /* RvsecnclTabView.swift */,
+				C2F7147E2B12A1E400F85B2A /* AccountViewController.swift */,
+				C2F714802B12B6B500F85B2A /* OrderCashViewController.swift */,
+				C2F714822B12C84B00F85B2A /* OrderConfirmViewController.swift */,
+				C2F714842B12CA7000F85B2A /* OrderCompleteView.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FD03B7753B2980403AB113A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				77927A8C39D19396D9454AAA /* Pods-InvestApp.debug.xcconfig */,
+				E79728C7B830F6102A429422 /* Pods-InvestApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +197,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C2A81C6E2AFF7030004F5B11 /* Build configuration list for PBXNativeTarget "InvestApp" */;
 			buildPhases = (
+				F1830C74EB50B1776FE243F4 /* [CP] Check Pods Manifest.lock */,
 				C2A81C562AFF702F004F5B11 /* Sources */,
 				C2A81C572AFF702F004F5B11 /* Frameworks */,
 				C2A81C582AFF702F004F5B11 /* Resources */,
+				536E11973815139D7D1B0884 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,21 +251,88 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2A81C6A2AFF7030004F5B11 /* LaunchScreen.storyboard in Resources */,
+				C2F7146F2B0FC4A800F85B2A /* location.csv in Resources */,
+				C2F714872B139A2D00F85B2A /* MyKeyboardView.xib in Resources */,
 				C2A81C672AFF7030004F5B11 /* Assets.xcassets in Resources */,
 				C2A81C652AFF702F004F5B11 /* Main.storyboard in Resources */,
+				C288756B2B087A5000909EF7 /* HomeStockCell.xib in Resources */,
+				C2F714712B0FCE2800F85B2A /* StockList.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		536E11973815139D7D1B0884 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InvestApp/Pods-InvestApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InvestApp/Pods-InvestApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InvestApp/Pods-InvestApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1830C74EB50B1776FE243F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InvestApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C2A81C562AFF702F004F5B11 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2A81C622AFF702F004F5B11 /* ViewController.swift in Sources */,
+				C2F714832B12C84B00F85B2A /* OrderConfirmViewController.swift in Sources */,
+				C2F714892B139A8300F85B2A /* MyKeyboardView.swift in Sources */,
+				C28875882B0936D200909EF7 /* DetailViewController.swift in Sources */,
+				C28875902B0A171000909EF7 /* AccountData.swift in Sources */,
+				C288756D2B08818000909EF7 /* StockData.swift in Sources */,
+				C288756A2B087A5000909EF7 /* HomeStockCell.swift in Sources */,
+				C28875712B089E4500909EF7 /* AccessTokenData.swift in Sources */,
+				C288758A2B09462B00909EF7 /* APIService.swift in Sources */,
+				C2F7147F2B12A1E400F85B2A /* AccountViewController.swift in Sources */,
+				C28875592B078CC400909EF7 /* K.swift in Sources */,
+				C2F714852B12CA7000F85B2A /* OrderCompleteView.swift in Sources */,
+				C2F714812B12B6B500F85B2A /* OrderCashViewController.swift in Sources */,
+				C2F714732B121A5000F85B2A /* TradingTMViewController.swift in Sources */,
+				C2F714752B121B7B00F85B2A /* OrderCashTabViewController.swift in Sources */,
+				C2F714792B1230B700F85B2A /* TabBarController.swift in Sources */,
+				C2F7146B2B0F5AE500F85B2A /* TradingManager.swift in Sources */,
 				C2A81C5E2AFF702F004F5B11 /* AppDelegate.swift in Sources */,
+				C2F7147B2B12800700F85B2A /* OrderCashTabView.swift in Sources */,
+				C2F7147D2B12823600F85B2A /* RvsecnclTabView.swift in Sources */,
 				C2A81C602AFF702F004F5B11 /* SceneDelegate.swift in Sources */,
+				C288756F2B08833C00909EF7 /* StockManager.swift in Sources */,
+				C28875732B08ADA100909EF7 /* StockModel.swift in Sources */,
+				C28875672B0876DA00909EF7 /* HomeViewController.swift in Sources */,
+				C288758E2B09FCB500909EF7 /* OrderCashData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +476,7 @@
 		};
 		C2A81C6F2AFF7030004F5B11 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77927A8C39D19396D9454AAA /* Pods-InvestApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +505,7 @@
 		};
 		C2A81C702AFF7030004F5B11 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E79728C7B830F6102A429422 /* Pods-InvestApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

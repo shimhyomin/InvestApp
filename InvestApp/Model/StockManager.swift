@@ -18,6 +18,8 @@ struct StockManager {
     let stocks = ["060310":"3S", "095570":"AJ네트웍스", "006840":"AK홀딩스", "054620":"APS"]
     var delegate: StockManagerDelegate?
     
+
+    
     //전체 stock
     func getStock() {
         var list: [StockModel] = []
@@ -30,7 +32,7 @@ struct StockManager {
             
             let request = AF.request(API.stock.url, method: .get, parameters: myParameters, encoding: URLEncoding.default, headers: myHeaders)
             request.response { response in
-                debugPrint(response)
+                //debugPrint(response)
                 //JSON Parshing
                 let decoder = JSONDecoder()
                 do {

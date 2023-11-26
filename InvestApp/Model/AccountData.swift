@@ -9,21 +9,41 @@ import Foundation
 
 struct AccountData: Codable {
     let output1: [Output1]
+    /*
+     [아래 순서대로 출력 : 19항목]
+     1: 주식
+     2: 펀드/MMW
+     3: 채권
+     4: ELS/DLS
+     5: WRAP
+     6: 신탁/퇴직연금/외화신탁
+     7: RP/발행어음
+     8: 해외주식
+     9: 해외채권
+     10: 금현물
+     11: CD/CP
+     12: 단기사채
+     13: 타사상품
+     14: 외화단기사채
+     15: 외화 ELS/DLS
+     16: 외화
+     17: 예수금+CMA
+     18: 청약자예수금
+     19: <합계>
+     */
     let output2: Output2
-    let rtCD, msgCD, msg1: String
-
-    enum CodingKeys: String, CodingKey {
-        case output1, output2
-        case rtCD = "rt_cd"
-        case msgCD = "msg_cd"
-        case msg1
-    }
+    let rt_cd: String //성공 실패 여부
+    let msg_cd, msg1: String
 }
 
 // MARK: - Output1
 struct Output1: Codable {
-    let pchsAmt, evluAmt, evluPflsAmt, crdtLndAmt: String
-    let realNassAmt, wholWeitRt: String
+    let pchsAmt: String //매입금액
+    let evluAmt: String //평가금액
+    let evluPflsAmt: String //평가손익금액
+    let crdtLndAmt: String //신용대출금액
+    let realNassAmt: String //실제순자산금액
+    let wholWeitRt: String //전체비중율
 
     enum CodingKeys: String, CodingKey {
         case pchsAmt = "pchs_amt"
