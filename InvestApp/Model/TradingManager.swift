@@ -21,6 +21,7 @@ protocol TradingManagerDelegate {
 }
 
 struct TradingManager {
+    var ms: String? = ""
     var delegate: TradingManagerDelegate?
     let url = "https://openapi.koreainvestment.com:9443/uapi/domestic-stock/v1/trading/order-cash"
     var headers = HTTPHeaders(["authorization": "Bearer \(K.access_token)",
@@ -54,8 +55,19 @@ struct TradingManager {
         headers.add(name: "tr_id", value: tr_id)
         
         let request = AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
+        
         request.response { response in
             debugPrint(response)
+            
+            //JSON Parsing
+            let decoder = JSONDecoder()
+            do {
+                let decodeData = try decoder.decode(OrderCashData.self, from: response.data!)
+                //self캡쳐 어떻게 하지???
+                
+            } catch{
+                print(error)
+            }
         }
     }
 }

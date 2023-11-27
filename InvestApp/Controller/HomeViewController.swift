@@ -26,7 +26,6 @@ class HomeViewController: UIViewController {
         //self.tabBarItem.title이 왜 nill일까?
         self.navigationItem.title = self.tabBarItem.title ?? "홈"
         
-        
         stockManager.delegate = self
         
         //APIService.requestAccessToken()

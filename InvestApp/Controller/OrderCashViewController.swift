@@ -61,7 +61,7 @@ class OrderCashViewController: UIViewController {
         if let desVC = segue.destination as? OrderConfirmViewController {
             desVC.name = stock?.name ?? ""
             desVC.id = stock?.id ?? ""
-            desVC.unpr = (unpr == 0) ? mxpr : unpr
+            desVC.unpr = unpr
             desVC.qty = qty
         }
     }
@@ -71,43 +71,40 @@ class OrderCashViewController: UIViewController {
 extension OrderCashViewController: MyKeyboardDelegate {
     func keyboardTapped(str: String) {
         if qtyTextField.isEditing {
-            updateTextField(str: str, id: 1)
+            switch str {
+            case "00": qty *= 100
+            case "-1": qty /= 10
+            default: if let n = Int(str) { qty = qty * 10 + n }
+            }
+            let qtyString = m.deciFormatter(value: qty)
+            qtyTextField.text = qtyString
+            
+            if qty != 0 && unpr == 0 {
+                unpr = mxpr
+                unprTextField.text = m.deciFormatter(value: unpr)
+            }
         } else {
-            updateTextField(str: str, id: 0)
+            switch str {
+            case "00": unpr *= 100
+            case "-1": unpr /= 10
+            default: if let n = Int(str) { unpr = unpr * 10 + n }
+            }
+            unprTextField.text = m.deciFormatter(value: unpr)
         }
-        if unpr == 0 {
-            totalLabel.text = "총금액 : \(m.deciFormatter(value: mxpr*qty))원"
-        } else {
-            totalLabel.text = "총금액 : \(m.deciFormatter(value: unpr*qty))원"
-        }
+        totalLabel.text = "총금액 : \(m.deciFormatter(value: unpr*qty))원"
     }
     
     func nextButtonTapped() {
         if qty == 0 {
             msgLabel.isHidden = false
-        }
-        else {
+        } else {
+            if unpr == 0 {
+                unpr = mxpr
+                unprTextField.text = m.deciFormatter(value: unpr)
+            }
             //매수가능 여부 API로 받아오기!!!
             msgLabel.isHidden = true
             performSegue(withIdentifier: "orderToConfirm", sender: nil)
-        }
-    }
-    
-    func updateTextField(str: String, id: Int) {
-        var result = (id == 0) ? unpr : qty
-        switch str {
-        case "00": result *= 100
-        case "-1": result /= 10
-        default: if let n = Int(str) { result = result * 10 + n }
-        }
-        //천단위 끊기
-        let resultString = m.deciFormatter(value: result)
-        if id == 0 {
-            unpr = result
-            unprTextField.text = resultString
-        } else {
-            qty = result
-            qtyTextField.text = resultString
         }
     }
 }

@@ -26,11 +26,3 @@ struct OrderCashTabViewPreviews: PreviewProvider {
         OrderCashTabView()
     }
 }
-
-//MARK: - 주문넣기
-/*
- //nil일 때 처리해주기!!!
- if let qty = qtyTextField.text, let unpr = unprTextField.text {
-     tradingManager.requestOrderCash(tr_int: 0, pdno: "051910", qty: qty, unpr: unpr)
- }
- */

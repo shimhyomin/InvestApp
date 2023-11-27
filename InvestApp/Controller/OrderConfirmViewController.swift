@@ -17,7 +17,7 @@ class OrderConfirmViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     
     var tradingManager = TradingManager()
-    var stock: StockModel?
+    //var stock: StockModel?
     var id: String = ""
     var name: String = ""
     var unpr: Int = 0
@@ -38,24 +38,45 @@ class OrderConfirmViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("OrderConfirm"+#function)
         self.tabBarController?.tabBar.isHidden = true
     }
     
     @IBAction func buttonPressed(_ sender: Any) {
-        if let qty = qtyLabel.text, let unpr = unprLabel.text, let id = stock?.id {
-            tradingManager.requestOrderCash(tr_int: 0, pdno: id, qty: qty, unpr: unpr)
-        }
+        //tr_int가 0이면 매수, 1이면 매도
+        tradingManager.requestOrderCash(tr_int: 0, pdno: id, qty: String(qty), unpr: String(unpr))
+        
+        //if 주문 실패시
+        //showPopup()
+        
+        //if 주문 성공시
+        performSegue(withIdentifier: "comfirmToComplete", sender: nil)
     }
 }
 
 //MARK: - TradingManagerDelegate
 extension OrderConfirmViewController: TradingManagerDelegate {
     func fail(msg: String) {
-        //todo
+        //실패 팝업창 띄우기
+        print("주문실패ㅜㅜㅜㅜ")
     }
     
     func success() {
-        //todo
+        //OrderComplete View 띄우기
+        print("주문성공~~~~~")
+    }
+}
+
+//MARK: - Popup
+extension OrderConfirmViewController {
+    func showPopup() {
+        let storyBoard = UIStoryboard.init(name: "PopupViewController", bundle: nil)
+        let popupVC = storyBoard.instantiateViewController(withIdentifier: "popupVC")
+        //popup view의 투명도
+        popupVC.modalPresentationStyle = .overCurrentContext
+        if let vc = popupVC as? PopupViewController {
+            vc.msg = "오류메세지 띄우기"
+        }
+        
+        self.present(popupVC, animated: false, completion: nil)
     }
 }

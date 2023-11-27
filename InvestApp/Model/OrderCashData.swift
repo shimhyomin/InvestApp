@@ -16,7 +16,7 @@ struct OrderCashData: Codable {
 struct OrderCashOutput: Codable {
     let krx_Fwdg_Ord_Orgno: String //한국거래소전송주문조직번호
     let odno: String //주문번호
-    let ordTmd: String //주문번호
+    let ordTmd: String //주문시각
 
     enum CodingKeys: String, CodingKey {
         case krx_Fwdg_Ord_Orgno = "KRX_FWDG_ORD_ORGNO"

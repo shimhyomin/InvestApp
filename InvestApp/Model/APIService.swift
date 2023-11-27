@@ -113,9 +113,7 @@ enum APIService {
             debugPrint(response)
             let decoder = JSONDecoder()
             do {
-                
                 let decodeData = try decoder.decode(OrderCashData.self, from: response.data!)
-                print(decodeData.msg1)
             }catch{
                 print(error)
             }

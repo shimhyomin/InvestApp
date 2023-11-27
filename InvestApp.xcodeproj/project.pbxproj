@@ -25,6 +25,10 @@
 		C2A81C652AFF702F004F5B11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2A81C632AFF702F004F5B11 /* Main.storyboard */; };
 		C2A81C672AFF7030004F5B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2A81C662AFF7030004F5B11 /* Assets.xcassets */; };
 		C2A81C6A2AFF7030004F5B11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2A81C682AFF7030004F5B11 /* LaunchScreen.storyboard */; };
+		C2D02CA52B14246B00011A82 /* OrderCashModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D02CA42B14246B00011A82 /* OrderCashModel.swift */; };
+		C2D02CA72B15307400011A82 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D02CA62B15307400011A82 /* PopupViewController.swift */; };
+		C2D02CAB2B15321000011A82 /* PopupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2D02CAA2B15321000011A82 /* PopupViewController.storyboard */; };
+		C2D02CAD2B153D0500011A82 /* OrderCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D02CAC2B153D0500011A82 /* OrderCompleteViewController.swift */; };
 		C2F7146B2B0F5AE500F85B2A /* TradingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F7146A2B0F5AE500F85B2A /* TradingManager.swift */; };
 		C2F7146F2B0FC4A800F85B2A /* location.csv in Resources */ = {isa = PBXBuildFile; fileRef = C2F7146E2B0FC4A800F85B2A /* location.csv */; };
 		C2F714712B0FCE2800F85B2A /* StockList.csv in Resources */ = {isa = PBXBuildFile; fileRef = C2F714702B0FCE2800F85B2A /* StockList.csv */; };
@@ -63,6 +67,10 @@
 		C2A81C692AFF7030004F5B11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2A81C6B2AFF7030004F5B11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2BD9E051ED19417C414732D /* Pods_InvestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InvestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2D02CA42B14246B00011A82 /* OrderCashModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCashModel.swift; sourceTree = "<group>"; };
+		C2D02CA62B15307400011A82 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		C2D02CAA2B15321000011A82 /* PopupViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopupViewController.storyboard; sourceTree = "<group>"; };
+		C2D02CAC2B153D0500011A82 /* OrderCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCompleteViewController.swift; sourceTree = "<group>"; };
 		C2F7146A2B0F5AE500F85B2A /* TradingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingManager.swift; sourceTree = "<group>"; };
 		C2F7146E2B0FC4A800F85B2A /* location.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = location.csv; sourceTree = "<group>"; };
 		C2F714702B0FCE2800F85B2A /* StockList.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StockList.csv; sourceTree = "<group>"; };
@@ -144,9 +152,10 @@
 				C28875722B08ADA100909EF7 /* StockModel.swift */,
 				C28875702B089E4500909EF7 /* AccessTokenData.swift */,
 				C28875892B09462B00909EF7 /* APIService.swift */,
-				C288758D2B09FCB500909EF7 /* OrderCashData.swift */,
 				C288758F2B0A171000909EF7 /* AccountData.swift */,
 				C2F7146A2B0F5AE500F85B2A /* TradingManager.swift */,
+				C288758D2B09FCB500909EF7 /* OrderCashData.swift */,
+				C2D02CA42B14246B00011A82 /* OrderCashModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -159,6 +168,8 @@
 				C28875692B087A5000909EF7 /* HomeStockCell.xib */,
 				C2F714862B139A2D00F85B2A /* MyKeyboardView.xib */,
 				C2F714882B139A8300F85B2A /* MyKeyboardView.swift */,
+				C2D02CA62B15307400011A82 /* PopupViewController.swift */,
+				C2D02CAA2B15321000011A82 /* PopupViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,6 +188,7 @@
 				C2F714802B12B6B500F85B2A /* OrderCashViewController.swift */,
 				C2F714822B12C84B00F85B2A /* OrderConfirmViewController.swift */,
 				C2F714842B12CA7000F85B2A /* OrderCompleteView.swift */,
+				C2D02CAC2B153D0500011A82 /* OrderCompleteViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -250,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2D02CAB2B15321000011A82 /* PopupViewController.storyboard in Resources */,
 				C2A81C6A2AFF7030004F5B11 /* LaunchScreen.storyboard in Resources */,
 				C2F7146F2B0FC4A800F85B2A /* location.csv in Resources */,
 				C2F714872B139A2D00F85B2A /* MyKeyboardView.xib in Resources */,
@@ -314,6 +327,7 @@
 				C28875882B0936D200909EF7 /* DetailViewController.swift in Sources */,
 				C28875902B0A171000909EF7 /* AccountData.swift in Sources */,
 				C288756D2B08818000909EF7 /* StockData.swift in Sources */,
+				C2D02CAD2B153D0500011A82 /* OrderCompleteViewController.swift in Sources */,
 				C288756A2B087A5000909EF7 /* HomeStockCell.swift in Sources */,
 				C28875712B089E4500909EF7 /* AccessTokenData.swift in Sources */,
 				C288758A2B09462B00909EF7 /* APIService.swift in Sources */,
@@ -329,10 +343,12 @@
 				C2F7147B2B12800700F85B2A /* OrderCashTabView.swift in Sources */,
 				C2F7147D2B12823600F85B2A /* RvsecnclTabView.swift in Sources */,
 				C2A81C602AFF702F004F5B11 /* SceneDelegate.swift in Sources */,
+				C2D02CA52B14246B00011A82 /* OrderCashModel.swift in Sources */,
 				C288756F2B08833C00909EF7 /* StockManager.swift in Sources */,
 				C28875732B08ADA100909EF7 /* StockModel.swift in Sources */,
 				C28875672B0876DA00909EF7 /* HomeViewController.swift in Sources */,
 				C288758E2B09FCB500909EF7 /* OrderCashData.swift in Sources */,
+				C2D02CA72B15307400011A82 /* PopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
