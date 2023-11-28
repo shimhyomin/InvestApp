@@ -14,13 +14,13 @@ class TradingTMViewController: TabmanViewController {
     //@IBOutlet weak var tabView: UIView!
     
     private var viewControllers: [UIViewController] = []
-    private var titles: [String] = ["주식주문(현금)", "정정/취소"]
+    private var titles: [String] = ["매매", "정정/취소"]
     let firstVC = UIHostingController(rootView: OrderCashTabView())
     let secondVC = UIHostingController(rootView: RvsecnclTabView())
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "주식주문"
+        self.navigationItem.title = "매매"
         
         viewControllers.append(firstVC)
         viewControllers.append(secondVC)

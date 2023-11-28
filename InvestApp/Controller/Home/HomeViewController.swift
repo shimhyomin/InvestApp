@@ -28,40 +28,13 @@ class HomeViewController: UIViewController {
         
         stockManager.delegate = self
         
-        //APIService.requestAccessToken()
-        //APIService.requestAccount()
-        //loadLocationsFromCSV()
-        
         stockTableView.register(UINib(nibName: "HomeStockCell", bundle: nil), forCellReuseIdentifier: "reuseCell")
     }
     
-    private func parseCSV(url: URL) {
-        do {
-            let data = try Data(contentsOf: url)
-            let dataEncoded = String(data: data, encoding: .utf8)
-            if let dataArr = dataEncoded?.components(separatedBy: "\n").map({$0.components(separatedBy: ",")}) {
-                for _ in dataArr {
-                    //stockList[item[0]] = item[1]
-                    print("dataArr: \(dataArr)")
-                }
-            } else { print("Error dataEncoding") }
-            
-        } catch  {
-            print("Error reading CSV file: \(error)")
-        }
-    }
-    
-    private func loadLocationsFromCSV() {
-        if let path = Bundle.main.path(forResource: "location", ofType: "csv") {
-            parseCSV(url: URL(fileURLWithPath: path))
-            print(stockList)
-        } else {
-            print("Error to loadLocationsFromCSV")
-        }
-    }
+
     
     override func viewWillAppear(_ animated: Bool) {
-        stockManager.getStock()
+        stockManager.getStocks()
     }
     
     //MARK: - Navigation
@@ -121,6 +94,34 @@ extension HomeViewController: StockManagerDelegate {
             self.stockModelList = stockModels
             //self.stockModelList.sorted(by: self.fun)
             self.stockTableView.reloadData()
+        }
+    }
+}
+
+//MARK: - CSV
+extension HomeViewController {
+    private func parseCSV(url: URL) {
+        do {
+            let data = try Data(contentsOf: url)
+            let dataEncoded = String(data: data, encoding: .utf8)
+            if let dataArr = dataEncoded?.components(separatedBy: "\n").map({$0.components(separatedBy: ",")}) {
+                for _ in dataArr {
+                    //stockList[item[0]] = item[1]
+                    print("dataArr: \(dataArr)")
+                }
+            } else { print("Error dataEncoding") }
+            
+        } catch  {
+            print("Error reading CSV file: \(error)")
+        }
+    }
+    
+    private func loadLocationsFromCSV() {
+        if let path = Bundle.main.path(forResource: "location", ofType: "csv") {
+            parseCSV(url: URL(fileURLWithPath: path))
+            print(stockList)
+        } else {
+            print("Error to loadLocationsFromCSV")
         }
     }
 }

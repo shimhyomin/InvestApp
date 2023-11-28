@@ -11,9 +11,10 @@ class AccountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         self.navigationItem.title = "내정보"
+        
+        //APIService.requestAccount()
+        //APIService.requestProfitNLoss()
     }
     
 

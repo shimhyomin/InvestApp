@@ -34,6 +34,37 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        drawView()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
+    //MARK: - Navigation Prepare
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let desVC = segue.destination as? DetailViewController else { return }
+//        guard let senderStock = sender as? StockModel else { return }
+//        desVC.stock = senderStock
+        if let desVC = segue.destination as? OrderCashViewController {
+            //self.tabBarController?.tabBar.isHidden = true
+            desVC.stock = stock
+            return
+        }
+        return
+    }
+}
+
+
+//MARK: - DrawView
+extension DetailViewController {
+    func drawView() {
         self.navigationItem.title = stock?.name
         
         stockNameLabel.text = stock?.name
@@ -81,26 +112,5 @@ class DetailViewController: UIViewController {
             return (oprc - lwpr) / (hgpr - lwpr)
         }
         progressBar.progress = pr
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.tabBarController?.tabBar.isHidden = true
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        self.tabBarController?.tabBar.isHidden = false
-    }
-    
-    //MARK: - Navigation Prepare
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let desVC = segue.destination as? DetailViewController else { return }
-//        guard let senderStock = sender as? StockModel else { return }
-//        desVC.stock = senderStock
-        if let desVC = segue.destination as? OrderCashViewController {
-            //self.tabBarController?.tabBar.isHidden = true
-            desVC.stock = stock
-            return
-        }
-        return
     }
 }

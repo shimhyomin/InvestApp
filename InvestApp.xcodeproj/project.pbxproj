@@ -51,7 +51,7 @@
 		C28875662B0876DA00909EF7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C28875682B087A5000909EF7 /* HomeStockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStockCell.swift; sourceTree = "<group>"; };
 		C28875692B087A5000909EF7 /* HomeStockCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeStockCell.xib; sourceTree = "<group>"; };
-		C288756C2B08818000909EF7 /* StockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StockData.swift; path = InvestApp/Model/StockData.swift; sourceTree = SOURCE_ROOT; };
+		C288756C2B08818000909EF7 /* StockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StockData.swift; path = InvestApp/Model/Stock/StockData.swift; sourceTree = SOURCE_ROOT; };
 		C288756E2B08833C00909EF7 /* StockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockManager.swift; sourceTree = "<group>"; };
 		C28875702B089E4500909EF7 /* AccessTokenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenData.swift; sourceTree = "<group>"; };
 		C28875722B08ADA100909EF7 /* StockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
@@ -147,15 +147,10 @@
 		C2A81C712AFF7037004F5B11 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C288756E2B08833C00909EF7 /* StockManager.swift */,
-				C288756C2B08818000909EF7 /* StockData.swift */,
-				C28875722B08ADA100909EF7 /* StockModel.swift */,
-				C28875702B089E4500909EF7 /* AccessTokenData.swift */,
-				C28875892B09462B00909EF7 /* APIService.swift */,
-				C288758F2B0A171000909EF7 /* AccountData.swift */,
-				C2F7146A2B0F5AE500F85B2A /* TradingManager.swift */,
-				C288758D2B09FCB500909EF7 /* OrderCashData.swift */,
-				C2D02CA42B14246B00011A82 /* OrderCashModel.swift */,
+				C2D02CB12B16343500011A82 /* API */,
+				C2D02CB02B15E0FB00011A82 /* Account */,
+				C2D02CAF2B15E0ED00011A82 /* Trading */,
+				C2D02CAE2B15E0E100011A82 /* Stock */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,20 +172,81 @@
 		C2A81C732AFF7051004F5B11 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C2D02CB42B1655B200011A82 /* Order */,
+				C2D02CB32B16559B00011A82 /* Trading */,
+				C2D02CB22B16558E00011A82 /* Home */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C2D02CAE2B15E0E100011A82 /* Stock */ = {
+			isa = PBXGroup;
+			children = (
+				C288756E2B08833C00909EF7 /* StockManager.swift */,
+				C288756C2B08818000909EF7 /* StockData.swift */,
+				C28875722B08ADA100909EF7 /* StockModel.swift */,
+			);
+			path = Stock;
+			sourceTree = "<group>";
+		};
+		C2D02CAF2B15E0ED00011A82 /* Trading */ = {
+			isa = PBXGroup;
+			children = (
+				C2F7146A2B0F5AE500F85B2A /* TradingManager.swift */,
+				C288758D2B09FCB500909EF7 /* OrderCashData.swift */,
+				C2D02CA42B14246B00011A82 /* OrderCashModel.swift */,
+			);
+			path = Trading;
+			sourceTree = "<group>";
+		};
+		C2D02CB02B15E0FB00011A82 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				C288758F2B0A171000909EF7 /* AccountData.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		C2D02CB12B16343500011A82 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C28875702B089E4500909EF7 /* AccessTokenData.swift */,
+				C28875892B09462B00909EF7 /* APIService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		C2D02CB22B16558E00011A82 /* Home */ = {
+			isa = PBXGroup;
+			children = (
 				C28875662B0876DA00909EF7 /* HomeViewController.swift */,
 				C28875872B0936D200909EF7 /* DetailViewController.swift */,
-				C2F714722B121A5000F85B2A /* TradingTMViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C2D02CB32B16559B00011A82 /* Trading */ = {
+			isa = PBXGroup;
+			children = (
 				C2F714742B121B7B00F85B2A /* OrderCashTabViewController.swift */,
+				C2F714722B121A5000F85B2A /* TradingTMViewController.swift */,
 				C2F714782B1230B700F85B2A /* TabBarController.swift */,
-				C2F7147A2B12800700F85B2A /* OrderCashTabView.swift */,
 				C2F7147C2B12823600F85B2A /* RvsecnclTabView.swift */,
 				C2F7147E2B12A1E400F85B2A /* AccountViewController.swift */,
+			);
+			path = Trading;
+			sourceTree = "<group>";
+		};
+		C2D02CB42B1655B200011A82 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				C2F7147A2B12800700F85B2A /* OrderCashTabView.swift */,
 				C2F714802B12B6B500F85B2A /* OrderCashViewController.swift */,
 				C2F714822B12C84B00F85B2A /* OrderConfirmViewController.swift */,
 				C2F714842B12CA7000F85B2A /* OrderCompleteView.swift */,
 				C2D02CAC2B153D0500011A82 /* OrderCompleteViewController.swift */,
 			);
-			path = Controller;
+			path = Order;
 			sourceTree = "<group>";
 		};
 		FD03B7753B2980403AB113A8 /* Pods */ = {

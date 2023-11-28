@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SwiftUI
 
 class OrderConfirmViewController: UIViewController {
     
@@ -44,12 +43,6 @@ class OrderConfirmViewController: UIViewController {
     @IBAction func buttonPressed(_ sender: Any) {
         //tr_int가 0이면 매수, 1이면 매도
         tradingManager.requestOrderCash(tr_int: 0, pdno: id, qty: String(qty), unpr: String(unpr))
-        
-        //if 주문 실패시
-        //showPopup()
-        
-        //if 주문 성공시
-        performSegue(withIdentifier: "comfirmToComplete", sender: nil)
     }
 }
 
@@ -57,24 +50,24 @@ class OrderConfirmViewController: UIViewController {
 extension OrderConfirmViewController: TradingManagerDelegate {
     func fail(msg: String) {
         //실패 팝업창 띄우기
-        print("주문실패ㅜㅜㅜㅜ")
+        showPopup(with: msg)
     }
     
     func success() {
         //OrderComplete View 띄우기
-        print("주문성공~~~~~")
+        performSegue(withIdentifier: "comfirmToComplete", sender: nil)
     }
 }
 
 //MARK: - Popup
 extension OrderConfirmViewController {
-    func showPopup() {
+    func showPopup(with msg: String) {
         let storyBoard = UIStoryboard.init(name: "PopupViewController", bundle: nil)
         let popupVC = storyBoard.instantiateViewController(withIdentifier: "popupVC")
         //popup view의 투명도
         popupVC.modalPresentationStyle = .overCurrentContext
         if let vc = popupVC as? PopupViewController {
-            vc.msg = "오류메세지 띄우기"
+            vc.msg = msg
         }
         
         self.present(popupVC, animated: false, completion: nil)
