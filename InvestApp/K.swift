@@ -7,6 +7,7 @@ struct K {
     static let access_token = "(access token)"
     static var empire_date = "(yyyy-mm-dd HH:mm:ss)"
     static let account = "(account)"
+    
 }
 
 struct m{
