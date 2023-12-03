@@ -29,6 +29,7 @@
 		C2D02CA72B15307400011A82 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D02CA62B15307400011A82 /* PopupViewController.swift */; };
 		C2D02CAB2B15321000011A82 /* PopupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2D02CAA2B15321000011A82 /* PopupViewController.storyboard */; };
 		C2D02CAD2B153D0500011A82 /* OrderCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D02CAC2B153D0500011A82 /* OrderCompleteViewController.swift */; };
+		C2D02CB62B16D6E600011A82 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2D02CB52B16D6E600011A82 /* GoogleService-Info.plist */; };
 		C2F7146B2B0F5AE500F85B2A /* TradingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F7146A2B0F5AE500F85B2A /* TradingManager.swift */; };
 		C2F7146F2B0FC4A800F85B2A /* location.csv in Resources */ = {isa = PBXBuildFile; fileRef = C2F7146E2B0FC4A800F85B2A /* location.csv */; };
 		C2F714712B0FCE2800F85B2A /* StockList.csv in Resources */ = {isa = PBXBuildFile; fileRef = C2F714702B0FCE2800F85B2A /* StockList.csv */; };
@@ -71,6 +72,7 @@
 		C2D02CA62B15307400011A82 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		C2D02CAA2B15321000011A82 /* PopupViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopupViewController.storyboard; sourceTree = "<group>"; };
 		C2D02CAC2B153D0500011A82 /* OrderCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCompleteViewController.swift; sourceTree = "<group>"; };
+		C2D02CB52B16D6E600011A82 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2F7146A2B0F5AE500F85B2A /* TradingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingManager.swift; sourceTree = "<group>"; };
 		C2F7146E2B0FC4A800F85B2A /* location.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = location.csv; sourceTree = "<group>"; };
 		C2F714702B0FCE2800F85B2A /* StockList.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StockList.csv; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				C2F714702B0FCE2800F85B2A /* StockList.csv */,
 				C2F7146E2B0FC4A800F85B2A /* location.csv */,
 				C2A81C6B2AFF7030004F5B11 /* Info.plist */,
+				C2D02CB52B16D6E600011A82 /* GoogleService-Info.plist */,
 				C28875582B078CC400909EF7 /* K.swift */,
 			);
 			path = InvestApp;
@@ -172,6 +175,7 @@
 		C2A81C732AFF7051004F5B11 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C2F7147E2B12A1E400F85B2A /* AccountViewController.swift */,
 				C2D02CB42B1655B200011A82 /* Order */,
 				C2D02CB32B16559B00011A82 /* Trading */,
 				C2D02CB22B16558E00011A82 /* Home */,
@@ -232,7 +236,6 @@
 				C2F714722B121A5000F85B2A /* TradingTMViewController.swift */,
 				C2F714782B1230B700F85B2A /* TabBarController.swift */,
 				C2F7147C2B12823600F85B2A /* RvsecnclTabView.swift */,
-				C2F7147E2B12A1E400F85B2A /* AccountViewController.swift */,
 			);
 			path = Trading;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 			files = (
 				C2D02CAB2B15321000011A82 /* PopupViewController.storyboard in Resources */,
 				C2A81C6A2AFF7030004F5B11 /* LaunchScreen.storyboard in Resources */,
+				C2D02CB62B16D6E600011A82 /* GoogleService-Info.plist in Resources */,
 				C2F7146F2B0FC4A800F85B2A /* location.csv in Resources */,
 				C2F714872B139A2D00F85B2A /* MyKeyboardView.xib in Resources */,
 				C2A81C672AFF7030004F5B11 /* Assets.xcassets in Resources */,

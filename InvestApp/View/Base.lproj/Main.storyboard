@@ -21,7 +21,6 @@
                     <connections>
                         <segue destination="fWm-ha-tik" kind="relationship" relationship="viewControllers" id="wt9-oa-XPf"/>
                         <segue destination="FTP-J1-azm" kind="relationship" relationship="viewControllers" id="f7H-bT-P8V"/>
-                        <segue destination="LRu-Aq-AVU" kind="relationship" relationship="viewControllers" id="ob9-py-Grm"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O2C-8W-5un" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -258,6 +258,9 @@ class MyRequestInterceptor: RequestInterceptor {
         switch statusCode {
         case 200...299:
             completion(.doNotRetry)
+        case 500:
+            print("error 500")
+            completion(.retry)
         default:
             if request.retryCount < retryLimit {
                 completion(.retry)
