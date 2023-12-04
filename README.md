@@ -13,16 +13,20 @@
 
 cell 선택시 해당 주식의 상세정보를 보여준다.
 
-![홈](https://github.com/shimhyomin/InvestApp/blob/main/img/home.png?raw=true)
+<img src="img/home.png" width="300">
+
 - 상세정보
 주식 상세정보(한글명, 업종명, 상한가, 하한가, 최저가 등)를 보여준다.
 
 하단의 주문하기 버튼 클릭 시 주식주문 화면으로 이동한다.
 
 ![상세정보](img/detail.mov)
+<img src="img/detail.mov" width="300">
+
 - 주식주문
 
 ![주식주문 실패](img/orderFail.mov)
+<img src="img/orderFail.mov" width="300">
 
 
 ### 2. 즐겨찾기(예정)
